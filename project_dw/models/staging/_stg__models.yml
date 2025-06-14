@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_status_movement
+    description: "Mmovements for all opportunities"
+    columns:
+      - name: movement_id
+        description: "ID movement"
+        tests:
+          - unique
+          - not_null
+      - name: etl_inserted_at
+        description: "Timestamp de quando o dado foi carregado no modelo"
+
+  - name: stg_users
+    description: "Staging Users"
+    columns:
+      - name: stg_users.user_id
+        description: "ID for Users"
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_status

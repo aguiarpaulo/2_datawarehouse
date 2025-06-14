@@ -1,0 +1,7 @@
+status_id,status_name
+1,Lead
+2,Contacted
+3,Qualified
+4,Proposal Sent
+5,Negotiation
+6,Closed
