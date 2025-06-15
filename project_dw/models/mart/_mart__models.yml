@@ -1,0 +1,23 @@
+# Report movements
+version: 2
+
+models:
+  - name: mart_status_movement
+    description: "movements report"
+    config:
+      materialized: table
+      unique_key: movement_id
+    columns:
+      - name: movement_id
+        description: "movement key"
+        tests:
+          - not_null
+          - unique
+      - name: value
+        description: "values of the opportunities"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 50000
+              max_value: 1000000
+              strictly: false
