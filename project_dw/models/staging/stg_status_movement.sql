@@ -13,7 +13,10 @@ transformed as (
         transition_date as transition_date,
 
         -- Metadados
-        current_timestamp as etl_inserted_at
+        current_timestamp as etl_inserted_at,
+
+        -- Values
+        value as value
         
     from source
 )
