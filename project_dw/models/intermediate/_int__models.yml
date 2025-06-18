@@ -114,7 +114,7 @@ models:
           - not_null
           - unique
       - name: value
-        description: "values of the opportunities"
+        description: "values of the opportunities. ."
         tests:
           - not_null
           - dbt_expectations.expect_column_values_to_be_between:
