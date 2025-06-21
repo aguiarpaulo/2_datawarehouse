@@ -28,14 +28,14 @@ jobs:
           project_dw:
             target: prd
             outputs:
-              prod:
+              prd:
                 type: postgres
                 threads: 4
-                host: ${{ secrets.RAILWAY_DB_HOST }}
-                user: ${{ secrets.RAILWAY_DB_USER }}
-                pass: ${{ secrets.RAILWAY_DB_PASS }}
-                port: ${{ secrets.RAILWAY_DB_PORT }}
-                dbname: ${{ secrets.RAILWAY_DB_NAME }}
+                host: ${{ secrets.RENDER_DB_HOST }}
+                user: ${{ secrets.RENDER_DB_USER }}
+                pass: ${{ secrets.RENDER_DB_PASS }}
+                port: ${{ secrets.RENDER_DB_PORT }}
+                dbname: ${{ secrets.RENDER_DB_NAME }}
                 schema: public
           EOF
 
